@@ -63,6 +63,9 @@ hr {
 /* Customer details */
 #customerdetails{
   padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .h1{
   margin: 10px 0 10px 0;
@@ -76,24 +79,26 @@ hr {
 }
 #customername{
   font-size: 16px;
-  padding: 5px;
-  font-weight: 500;
+  padding: 5px 5px 5px 0;
+  font-weight: 600;
+  width: 100%;
 }
 #customeraddr{
   font-size: 16px;
-  padding: 0 5px;
+  padding: 0;
+  width: 100%;
   resize: none;
-}
-.inputpair label{
-  padding: 0 5px;
 }
 .inputpair input{
   border: none;
   font-size: 16px;
 }
 /* Invoice section */
+#invoice-section{
+  padding: 15px;
+}
 #invoice-section .h1{
-  padding-left: 20px;
+  padding-left: 10px;
 }
 #itemlist {
     border: 1px solid #729B79;
@@ -212,7 +217,7 @@ hr {
 }
 /*photographers section*/
 .photographerstable {
-    width: 70%;
+    width: 100%;
     border: 1px solid #729b79;
     border-spacing: 0;
 }
@@ -220,10 +225,9 @@ hr {
     text-align: left;
 }
 .photographerstable th, .photographerstable td {
-    padding: 5px;
+    padding: 5px 20px;
+    border-bottom: 1px solid #bacdaf;
 }
-.photographerstable tr:nth-child(even){background-color: #f2f2f2;}
-
 .photographerstable th {
   background-color: #bacdaf;
   color: #000;
@@ -256,4 +260,5 @@ hr {
     background: white;
     text-align: center;
     color: #666;
+    font-size: 13px;
 }
