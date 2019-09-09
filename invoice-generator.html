@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Invoice</title>
+    <link rel="stylesheet" type="text/css" href="./files/invoice.css">
+</head>
+
+<body>
+    <div id="firstpage">
+        <img src="./files/front-page-1@1x.png" srcset="./files/front-page-1@2x.png 2x, ./files/front-page-1@3x.png 3x" />
+    </div>
+    <div id="secondpage">
+    	<div class="pagetitle">Invoice for Photoshoot</div>
+        <div id="customerdetails">
+            <div id="invoicedate" class="subheading">Invoice date: </div>
+            <div class="h1">Customer Details</div>
+            <input id="customername" placeholder="Customer name" value="Alan Francis" />
+            <textarea placeholder="Customer address" id="customeraddr">No 4 Sreeram gateway, Perungalathur,
+Chennai - 606561.</textarea>
+            <div class="inputpair">
+                <label for="customerphone">Mobile number: </label>
+                <input name="customerphone" id="customerphone" value="8065776065" />
+            </div>
+            <div class="h1">Job Details</div>
+            <div class="inputpair">
+                <label for="joblocation">Location: </label>
+                <input name="joblocation" id="joblocation" value="Tambaram" />
+            </div>
+            <div class="inputpair">
+                <label for="jobdatetime">Date & time: </label>
+                <input id="jobdatetime" value="12 June, 2019 5PM" />
+            </div>
+            <hr />
+        </div>
+        <div id="invoice-section">
+            <div class="h1">Invoice Items</div>
+            <div id="itemlist">
+                <div class="item">
+                    <div class="namedesc">
+                        <div class="name">Traditional Photography</div>
+                        <div class="desc">Great for still group shots and stage coverage</div>
+                    </div>
+                    <div class="itemcost">Rs 4000</div>
+                    <div class="menu">
+                        <div class="remove" onclick="removeItem(this)">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="#000000" d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" />
+                            </svg>
+                        </div>
+                        <div class="edit" onclick="editItem(this)">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="#000000" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="namedesc">
+                        <div class="name">Candid Photography</div>
+                        <div class="desc">Capture great moments from your event by amazing photographers</div>
+                    </div>
+                    <div class="itemcost">Rs 8500</div>
+                    <div class="menu">
+                        <div class="remove" onclick="removeItem(this)">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="#000000" d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" />
+                            </svg>
+                        </div>
+                        <div class="edit" onclick="editItem(this)">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="#000000" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item total">
+                    <div class="totaldesc">Total Estimate</div>
+                    <div id="totalamt" class="totalamt">Rs 13000</div>
+            </div>
+            <div class="additems noprint">
+                <div class="additem-label">Add Item</div>
+                <input id="nameinput" placeholder="Item name" />
+                <textarea id="descinput" placeholder="Item description"></textarea>
+                <input id="amountinput" placeholder="Item cost" />
+                <div class="additem-buttons">
+                    <button id="additembtn" onclick="additem()" class="pry btn">Add Item</button>
+                    <button id="clearbtn" onclick="clearform()" class="normal btn">Clear</button>
+                </div>
+            </div>
+        </div>
+        <div class="terms">
+        	<div class="h1">Terms and Conditions</div>
+        	<ul>
+        		<li>Photography session is for a maximum of 5 hours, any more will incur more charges.</li>
+        		<li>Photographers will take as much pictures as possible, from which you can choose desired number of photos for the album.</li>
+        		<li>Videos and photos will be provided on 2 DVDs and 1 pen drive or Bluray disc.</li>
+        		<li>We will provide a complimentary photo mug.</li>
+        	</ul>
+        </div>
+        <div class="paymentstructure">
+        	<div class="h1">Payment Structure</div>
+        	<ul>
+        		<li>Booking amount: 25% of the total estimate to block the dates, without this we cannot guarantee availability of our photographers.</li>
+        		<li>50% should be paid after completing the event/function.</li>
+        		<li>25% at the delivery of albums and DVDs.</li>
+        	</ul>
+        </div>
+        <div class="pagebreak photographerslist">
+        	<div class="h1">Our Talented Photographers</div>
+        	<table class="photographerstable">
+        		<tbody>
+        		<tr>
+        			<th>Photographers</th>
+        			<th>Experience</th>
+        		</tr>
+        		<tr>
+        			<td>Dinesh (Candid)</td>
+        			<td>12 years</td>
+        		</tr>
+        		<tr>
+        			<td>Rajesh</td>
+        			<td>18 years</td>
+        		</tr>
+        		<tr>
+        			<td>Prakash</td>
+        			<td>9 years</td>
+        		</tr>
+        		<tr>
+        			<td>Raja</td>
+        			<td>14 years</td>
+        		</tr>
+        		<tr>
+        			<td>Karthick</td>
+        			<td>4 years</td>
+        		</tr>
+        		<tr>
+        			<td>Anbu</td>
+        			<td>15 years</td>
+        		</tr>
+        		</tbody>
+        	</table>
+        </div>
+        <div class="equipmentlist">
+        	<div class="h1">Equipment Details</div>
+        	<div class="subheading">Our job is made easier by our equipment, we use industry standard equipment from Canon and Nikon for amazing results and editing flexibility.</div>
+        	<div class="photocams">
+        		<div class="cam">
+        			<img src="./files/canon5dm3.jpg">
+        			<div class="camname">Canon 5D Mark III</div>
+        		</div>
+        		<div class="cam">
+        			<img src="./files/canon7d.jpg">
+        			<div class="camname">Canon 7D</div>
+        		</div>
+        		<div class="cam">
+        			<img src="./files/nikond700.jpg">
+        			<div class="camname">Nikon D700</div>
+        		</div>
+        		<div class="cam">
+        			<img src="./files/nikond800.jpg">
+        			<div class="camname">Nikon D800</div>
+        		</div>
+        		<div class="cam">
+        			<img src="./files/panasonic3ccd.jpg">
+        			<div class="camname">Panasonic 3CCD</div>
+        		</div>
+        		<div class="cam">
+        			<img src="./files/sonyhd.jpg">
+        			<div class="camname">Sony HD</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+    <div class="footer">
+        <hr />
+        <div class="subheading">Thanks for your interest in Rey Photo Studio, Feel free to contact us for further details.</div>
+        <div class="subheading">Devi Jagadesh (Creative Head)</div>
+        <div class="subheading">Phone: 9176312204, 9841454253</div>
+    </div>
+</body>
+<script type="text/javascript" src="./files/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./files/moment.min.js"></script>
+<script type="text/javascript" src="./files/invoice.js"></script>
+</html>

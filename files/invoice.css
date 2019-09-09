@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+@media print {
+    body{
+      background: white !important;
+    }
+    .noprint,
+    .noprint * {
+        display: none !important;
+    }
+    .pagebreak { 
+        page-break-before: always; 
+        padding-top: 40px !important;
+    }
+}
+
+
+body {
+    width: 794px;
+    margin: auto;
+    font-family: "Open Sans";
+   background: #cdccdf;
+}
+.h2 {
+    font-weight: bold;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+.btn {
+    height: 30px;
+    width: 150px;
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+    background: white;
+    cursor: pointer;
+    border: 1px solid #729b79;
+}
+.btn:hover {
+    box-shadow: 0px 1px 4px 2px #ccc;
+}
+#invoicedate{
+  text-align: center;
+  font-size: 14px;
+}
+#secondpage{
+  background: #fff;
+  padding: 40px 25px 25px 25px;
+}
+.pagetitle{
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  color: #504F4F;
+}
+/* Customer details */
+#customerdetails{
+  padding: 10px 20px;
+}
+.h1{
+  margin: 10px 0 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+#customername, #customeraddr{
+  display: block;
+  width: 50%;
+  border: none;
+}
+#customername{
+  font-size: 16px;
+  padding: 5px;
+  font-weight: 500;
+}
+#customeraddr{
+  font-size: 16px;
+  padding: 0 5px;
+  resize: none;
+}
+.inputpair label{
+  padding: 0 5px;
+}
+.inputpair input{
+  border: none;
+  font-size: 16px;
+}
+/* Invoice section */
+#invoice-section .h1{
+  padding-left: 20px;
+}
+#itemlist {
+    border: 1px solid #729B79;
+}
+
+.item {
+    padding: 10px;
+    border-bottom: 1px solid #729B79;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    box-sizing: border-box;
+    justify-items: center;
+}
+
+.menu {
+    color: #fff;
+    margin-left: 20px;
+    align-self: center;
+    display: none;
+}
+
+.menu>.remove,
+.menu>.edit {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #729B79;
+    margin-right: 5px;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+}
+
+.item:hover .menu {
+    display: block;
+}
+
+.namedesc {
+    flex: 2;
+}
+
+.name {
+    font-size: 18px
+}
+
+.desc {
+    color: #666;
+}
+
+.itemcost {
+    align-self: center;
+}
+
+.item.total {
+    background: #BACDB0;
+}
+
+.item.total>.totaldesc {
+    flex: 1 0 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.totalamt {
+    font-weight: bold;
+}
+
+/* input form */
+.additems {
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    background-color: #D9E3D3;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.additem-label {
+    margin-bottom: 10px;
+}
+
+#nameinput,
+#descinput,
+#amountinput {
+    height: 35px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 10px;
+}
+
+#descinput {
+    height: 50px;
+    resize: none;
+}
+
+#amountinput {
+    text-align: right;
+}
+
+.additem-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#clearbtn,
+#additembtn {
+    margin-left: 10px;
+}
+.terms, .paymentstructure, .photographerslist, .equipmentlist{
+  padding: 0 20px;
+}
+/*photographers section*/
+.photographerstable {
+    width: 70%;
+    border: 1px solid #729b79;
+    border-spacing: 0;
+}
+.photographerstable th {
+    text-align: left;
+}
+.photographerstable th, .photographerstable td {
+    padding: 5px;
+}
+.photographerstable tr:nth-child(even){background-color: #f2f2f2;}
+
+.photographerstable th {
+  background-color: #bacdaf;
+  color: #000;
+}
+/*equiment section*/
+.equipmentlist .h2{
+  text-align: center;
+  margin-top: 25px;
+}
+.cam img {
+    width: 200px;
+}
+.cam {
+  padding-top: 20px;
+}
+.photocams {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+}
+.camname {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+.footer{
+    padding: 20px 45px;
+    background: white;
+    text-align: center;
+    color: #666;
+}
